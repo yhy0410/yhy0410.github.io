@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <title>Heeyoung's portfolio</title>
+        <link rel="shortcut icon" type="image/jpg" href="favicon.svg"/>
+        <script src="https://kit.fontawesome.com/1e87b6ba57.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+            <div id="introduction" class="section" width="100" >
+                <div id="container">
+                <img class="myPhoto" src="me.jpg"></img>
+                <h1 class="name">Heeyoung Yang</h1>
+                <h2 class="job"><i class="fas fa-laptop-code"></i> Software Developer</h2>
+                <button class="resume" onclick="window.location.href = 'resume.html';">Resume</button>
+                <button class="contact">Contact Me</button>
+                <button class="github" onclick="window.location.href = 'github.html';"><i class="fab fa-github"></i></button>
+                
+                <form id="formId" method="POST" action="https://httpbin.org/post" style="visibility: hidden;">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+                        <lable class="boxTitle" for="name">Name:</lable>
+                        <input type="text" id="name" name="name" class="box" required>
+                        <br>
+                        <lable class="boxTitle" for="email">Email:</lable><input class="box" type="email" name="email" id="email" required>
+                        <br>
+                        <lable class="boxTitle" for="address">Address:</lable><input class="box" type="text" name="address" id="address" required>
+                        <br>
+                        <lable class="boxTitle">city:</lable><input class="box" type="text" list="city" name="city" value="Toronto" required/ >
+                        <datalist id="city">
+                            <option value="Toronto">
+                            <option value="Vancouver">
+                            <option value="Montreal">
+                            <option value="Calgary">
+                            <option value="Quebec">
+                            <option value="Ottawa">
+                        </datalist><br>
+                        <lable class="boxTitle">Postal Code:</lable><input class="box" type="text" name="zip" pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$" required>
+                        <ul>
+                            <input type="radio" name="radioOption" id="option1" value="question" required/> Question <br>
+                            <input type="radio" name="radioOption" id="option2" value="comment"/> Comment <br>
+                            <input type="radio" name="radioOption" id="option3" value="hiring"/> Hiring <br>
+                        </ul>
+                            <input type="text" id="hourlyRate" name="hourlyRate" required placeholder="Please Enter the hourly Rate" pattern="\d+(?:\.\d+)?"/>
+                            <textarea name="comments" required></textarea>
+                        <br><br>
+                        <input class="submitbtn" type="submit" name="submit" />
+                    </fieldset>
+                </form>
+            </div>   
+            </div>
+            
+            <div id="infographic" class="section">
+                <div id="container">
+                    <div class="about">
+                        <h1>About me</h1>
+                        <div class="about__intro">
+                        <p>The self-motivated junior developer is seeking an opportunity to learn and make a positive impact.<br>
+                            I am looking for an entry-level position with an exciting company that wants to attract talented people.<br>
+                            I am continually evaluating and upgrading my skills So that I can make more contributions where I work. <br>
+                            Although I don't have experience in this field, I built projects by myself because I'm passionate about programming.</p>
+                          </div>
+                          
+                        </div>
+                    <div class="aboutMe">   
+                    <div class="skills"><h2>Skills</h2>
+                        <div class="info__detail">
+                    <ul class="skill__list">
+                        <li class="skill__option">C/C++</li>
+                        <li class="skill__option">Java</li>
+                        <li class="skill__option">JavaScript</li>
+                        <li class="skill__option">SQL</li>
+                    </ul>
+                </div>
+                    </div>
+                    <div class="basicInfo">
+                        <h2>Basic Info</h2>
+                            <div class="info__detail">
+                                <div class="basicInfo__detail">
+                            <p class="detail__title">EMAIL:</p>
+                            <p>hyang149@myseneca.ca</p>
+                            <p class="detail__title">LANGUAGE:</p>
+                            <p>English, Korean</p>
+                            <p class="detail__title">INTERESTS:</p>
+                            <p>Water activities, Editing videos</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reference">
+                    <div class="reference__set">
+                      <img class="reference__image" src="testimonial.png" />
+                      <div class="reference__details">
+                        <p class="reference__discription">
+                          //Reference will go here//<br>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Repellendus sed voluptas quidem accusantium molestiae, hic aut
+                          iure illo eius ducimus tenetur, unde incidunt laboriosam optio
+                          ullam laborum at cum doloremque. unde incidunt laboriosam optio
+                          ullam laborum at cum doloremque.
+                        </p>
+                        <div><a class="reference__name">name </a>/ company</div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+            <div id="education" class="section">
+                <div id="container">
+                    <h1>Education</h1>
+                    <div id="edu1">
+                        <div id="edu1_title">
+                            <p class="degree">Diploma</p>
+                            <p class="year">2021-2022(expected)</p>
+                        </div>
+                        <div id="edu1_detail">
+                            <li class="school">Seneca College</li>
+                            <li class="major">Computer Programming</li>
+                            <li class="award">Awarded with President's Honour List</li>
+                        </div>
+                    </div>
+                    <div id="edu2">
+                        <div id="edu2_title">
+                            <p class="degree">Bachelor's Degree</p>
+                            <p class="year">2009-2014</p>
+                        </div>    
+                        <div id="edu2_detail">
+                            <li class="school">The University of Suwon</li>
+                            <li class="major">The Department of Applied Statistics</li>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const form = document.querySelector("#formId");
+            const btn = document.querySelector(".contact");
+            const intro = document.querySelector("#introduction");
+            btn.addEventListener("click", () => {
+                if(form.style.visibility=="hidden") {
+                    form.style.visibility = "visible";
+                    intro.classList.add("formOpen");
+                } 
+                else {
+                    form.style.visibility = "hidden";
+                    intro.classList.remove("formOpen");
+                }
+            });
+
+            
+            const hiring = document.querySelector("#option3");
+            const rate = document.querySelector("#hourlyRate");
+            hiring.addEventListener("click", () => {
+                rate.style.visibility = "visible";
+            });
+            const question = document.querySelector("#option1");
+            question.addEventListener("click", () => {
+                rate.style.visibility = "hidden";
+            });
+            const comment = document.querySelector("#option2");
+            comment.addEventListener("click", () => {
+                rate.style.visibility = "hidden";
+            });
+
+        </script>
+    </body>
+</html>
